@@ -316,7 +316,7 @@ img {
 
 .publication {
   display: grid;
-  grid-template-columns: minmax(220px, 340px) minmax(0, 1fr);
+  grid-template-columns: minmax(200px, 280px) minmax(0, 1fr);
   gap: clamp(22px, 4vw, 38px);
   align-items: center;
   padding: 22px 0;
@@ -325,6 +325,7 @@ img {
 
 .publication-image {
   display: block;
+  width: min(100%, 280px);
   overflow: hidden;
   border: 1px solid var(--line-strong);
   border-radius: 6px;
@@ -339,17 +340,17 @@ img {
 
 .publication-image img {
   width: 100%;
-  aspect-ratio: 16 / 7.4;
+  aspect-ratio: 16 / 9;
   background: #fff;
-  object-fit: contain;
+  object-fit: fill;
   object-position: center;
 }
 
 .publication h3 {
   margin: 0;
   color: var(--ink);
-  font-family: var(--serif);
-  font-size: clamp(1.08rem, 1.45vw, 1.28rem);
+  font-family: var(--sans);
+  font-size: clamp(1rem, 1.2vw, 1.12rem);
   font-weight: 700;
   letter-spacing: 0;
   line-height: 1.18;
@@ -359,7 +360,7 @@ img {
   margin: 0;
   color: var(--ink);
   font-family: var(--serif);
-  font-size: clamp(1.25rem, 1.8vw, 1.55rem);
+  font-size: clamp(1rem, 1.2vw, 1.12rem);
   font-weight: 700;
   letter-spacing: 0;
   line-height: 1.18;
