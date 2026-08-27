@@ -33,10 +33,10 @@
         <!-- <p class="role">Ph.D. Student in Computer Science</p> -->
         <div class="short-rule" aria-hidden="true"></div>
         <p class="intro">
-          I am an incoming PhD student in the <a href="https://mmlab.hk/">MMLab</a>@<a href="https://www.hku.hk/">HKU</a>, supervised by <a href="https://xh-liu.github.io/">Prof. Xihui Liu</a>. Previously, I earned my MSc from the <a href="http://vipl.ict.ac.cn/en">VIPL</a> group at <a href="http://www.ict.cas.cn/">ICT</a> in 2026 under the supervision of <a href="https://vipl.ict.ac.cn/people/~sgshan">Prof. Shiguang Shan</a>, and worked closely with <a href="https://lynnho.github.io/">Prof. Zhenliang He</a>. Before that, I received my BEng from <a href="https://www.hitsz.edu.cn/index.html">HITsz</a> in 2023 under the supervision of <a href="https://wenjiepei.github.io/">Prof. Wenjie Pei</a>.
+          I am a first-year PhD student in the <a href="https://mmlab.hk/">MMLab</a>@<a href="https://www.hku.hk/">HKU</a>, supervised by <a href="https://xh-liu.github.io/">Prof. Xihui Liu</a>. Previously, I earned my MSc from the <a href="http://vipl.ict.ac.cn/en">VIPL</a> group at <a href="http://www.ict.cas.cn/">ICT</a> in 2026 under the supervision of <a href="https://vipl.ict.ac.cn/people/~sgshan">Prof. Shiguang Shan</a>, and worked closely with <a href="https://lynnho.github.io/">Prof. Zhenliang He</a>. Before that, I received my BEng from <a href="https://www.hitsz.edu.cn/index.html">HITsz</a> in 2023 under the supervision of <a href="https://wenjiepei.github.io/">Prof. Wenjie Pei</a>.
         </p>
         <p class="intro" style="margin-top: 10px;">
-          My current research interests lie in generative models and their applications to computer vision and multimodal learning.
+          My current research interests lie in generative models and their applications to computer vision, multimodal learning and world models.
         </p>
         <div class="profile-links" aria-label="Profile links">
           <a href="mailto:xyfjason@gmail.com" aria-label="Email">
@@ -105,6 +105,12 @@
               <p class="authors"><strong>Yifeng Xu</strong>, Zhenliang He, Meina Kan, Shiguang Shan, Xilin Chen</p>
               <p class="venue">arXiv 2025</p>
               <div class="publication-links" aria-label="Publication links">
+                <span class="abstract-popover">
+                  <button class="abstract-trigger" type="button" aria-describedby="abstract-jodi">Abstract</button>
+                  <span class="abstract-tooltip" id="abstract-jodi" role="tooltip">
+                    Visual generation and understanding are two deeply interconnected aspects of human intelligence, yet they have been traditionally treated as separate tasks in machine learning. In this paper, we propose Jodi, a diffusion framework that unifies visual generation and understanding by jointly modeling the image domain and multiple label domains. Specifically, Jodi is built upon a linear diffusion transformer along with a Role-Switch mechanism, which enables it to perform three particular types of tasks: (1) joint generation, where the model simultaneously generates images and multiple labels; (2) controllable generation, where images are generated conditioned on any combination of labels; and (3) image perception, where multiple labels can be predicted at once from a given image. Furthermore, we present the Joint-1.6M dataset, which contains 200K highquality images collected from public sources, automatic labels for 7 visual domains, and LLM-generated captions. Extensive experiments demonstrate that our Jodi excels in generation tasks and performs competitively in understanding tasks. Besides, Jodi exhibits strong extensibility to new visual domains. Codes, data, and model weights are available at https://github.com/VIPL-GENUN/Jodi.
+                  </span>
+                </span>
                 <a href="https://arxiv.org/abs/2505.19084">arXiv</a>
                 <a href="https://github.com/VIPL-GENUN/Jodi">Code</a>
                 <a href="https://VIPL-GENUN.github.io/Project-Jodi">Project Page</a>
@@ -122,6 +128,12 @@
               <p class="authors"><strong>Yifeng Xu</strong>, Zhenliang He, Shiguang Shan, Xilin Chen</p>
               <p class="venue">ICLR 2025</p>
               <div class="publication-links" aria-label="Publication links">
+                <span class="abstract-popover">
+                  <button class="abstract-trigger" type="button" aria-describedby="abstract-ctrlora">Abstract</button>
+                  <span class="abstract-tooltip" id="abstract-ctrlora" role="tooltip">
+                    Recently, large-scale diffusion models have made impressive progress in text-toimage (T2I) generation. To further equip these T2I models with fine-grained spatial control, approaches like ControlNet introduce an extra network that learns to follow a condition image. However, for every single condition type, ControlNet requires independent training on millions of data pairs with hundreds of GPU hours, which is quite expensive and makes it challenging for ordinary users to explore and develop new types of conditions. To address this problem, we propose the CtrLoRA framework, which trains a Base ControlNet to learn the common knowledge of image-to-image generation from multiple base conditions, along with condition-specific LoRAs to capture distinct characteristics of each condition. Utilizing our pretrained Base ControlNet, users can easily adapt it to new conditions, requiring as few as 1,000 data pairs and less than one hour of single-GPU training to obtain satisfactory results in most scenarios. Moreover, our CtrLoRA reduces the learnable parameters by 90% compared to ControlNet, significantly lowering the threshold to distribute and deploy the model weights. Extensive experiments on various types of conditions demonstrate the efficiency and effectiveness of our method. Codes and model weights will be released at https://github.com/xyfJASON/ctrlora.
+                  </span>
+                </span>
                 <a href="https://arxiv.org/abs/2410.09400">arXiv</a>
                 <a href="https://github.com/xyfJASON/ctrlora">Code</a>
                 <a href="assets/pub/ctrlora.bib.txt">BibTeX</a>
@@ -138,6 +150,12 @@
               <p class="authors">Xin Feng*, <strong>Yifeng Xu</strong>*, Guangming Lu<sup>&dagger;</sup>, Wenjie Pei<sup>&dagger;</sup></p>
               <p class="venue">ICCV 2023</p>
               <div class="publication-links" aria-label="Publication links">
+                <span class="abstract-popover">
+                  <button class="abstract-trigger" type="button" aria-describedby="abstract-hcl">Abstract</button>
+                  <span class="abstract-tooltip" id="abstract-hcl" role="tooltip">
+                    Effective image restoration with large-size corruptions, such as blind image inpainting, entails precise detection of corruption region masks which remains extremely challenging due to diverse shapes and patterns of corruptions. In this work, we present a novel method for automatic corruption detection, which allows for blind corruption restoration without known corruption masks. Specifically, we develop a hierarchical contrastive learning framework to detect corrupted regions by capturing the intrinsic semantic distinctions between corrupted and uncorrupted regions. In particular, our model detects the corrupted mask in a coarse-to-fine manner by first predicting a coarse mask by contrastive learning in low-resolution feature space and then refines the uncertain area of the mask by high-resolution contrastive learning. A specialized hierarchical interaction mechanism is designed to facilitate the knowledge propagation of contrastive learning in different scales, boosting the modeling performance substantially. The detected multi-scale corruption masks are then leveraged to guide the corruption restoration. Detecting corrupted regions by learning the contrastive distinctions rather than the semantic patterns of corruptions, our model has well generalization ability across different corruption patterns. Extensive experiments demonstrate following merits of our model: 1) the superior performance over other methods on both corruption detection and various image restoration tasks including blind inpainting and watermark removal, and 2) strong generalization across different corruption patterns such as graffiti, random noise or other image content. Codes and trained weights are available at https://github.com/xyfJASON/HCL.
+                  </span>
+                </span>
                 <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Feng_Hierarchical_Contrastive_Learning_for_Pattern-Generalizable_Image_Corruption_Detection_ICCV_2023_paper.pdf">PDF</a>
                 <a href="https://openaccess.thecvf.com/content/ICCV2023/supplemental/Feng_Hierarchical_Contrastive_Learning_ICCV_2023_supplemental.pdf">Supp</a>
                 <a href="https://arxiv.org/abs/2308.14061">arXiv</a>
@@ -163,7 +181,7 @@
             <div class="education-main">
               <h3>The University of Hong Kong</h3>
               <p class="degree">PhD student</p>
-              <p>Supervisor: Prof. Xihui Liu</p>
+              <p>Supervisor: <a href="https://xh-liu.github.io/">Prof. Xihui Liu</a></p>
             </div>
             <div class="education-meta">
               <time datetime="2026">2026.09 - Present</time>
@@ -178,7 +196,7 @@
             <div class="education-main">
               <h3>Institute of Computing Technology, CAS</h3>
               <p class="degree">MSc in Computer Science and Technology</p>
-              <p>Supervisor: Prof. Shiguang Shan</p>
+              <p>Supervisor: <a href="https://vipl.ict.ac.cn/people/~sgshan">Prof. Shiguang Shan</a></p>
             </div>
             <div class="education-meta">
               <time datetime="2023">2023.09 - 2026.06</time>
@@ -188,12 +206,12 @@
 
           <article class="education-item">
             <div class="school-mark">
-              <a href="https://www.hitsz.edu.cn/index.html"><img src="assets/logo/hit.png"></a>
+              <a href="https://www.hitsz.edu.cn/"><img src="assets/logo/hit.png"></a>
             </div>
             <div class="education-main">
               <h3>Harbin Institute of Technology, Shenzhen</h3>
               <p class="degree">BEng in Computer Science and Technology</p>
-              <p>Supervisor: Prof. Wenjie Pei</p>
+              <p>Supervisor: <a href="https://wenjiepei.github.io/">Prof. Wenjie Pei</a></p>
             </div>
             <div class="education-meta">
               <time datetime="2019">2019.09 - 2023.06</time>

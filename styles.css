@@ -160,7 +160,7 @@ img {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(270px, 0.72fr);
+  grid-template-columns: minmax(0, 1fr) minmax(270px, 320px);
   align-items: center;
   gap: clamp(34px, 6vw, 68px);
   min-height: 0;
@@ -260,6 +260,9 @@ img {
 }
 
 .portrait-frame {
+  justify-self: end;
+  width: 100%;
+  max-width: 320px;
   margin: 0;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -400,17 +403,85 @@ img {
   font-weight: 600;
 }
 
-.publication-links a:first-child {
+.publication-links a:first-child,
+.abstract-popover:first-child {
   padding-left: 0;
 }
 
-.publication-links a:not(:last-child)::after {
+.publication-links a:not(:last-child)::after,
+.abstract-popover:not(:last-child)::after {
   content: "";
   position: absolute;
   right: 0;
   width: 1px;
   height: 18px;
   background: var(--line-strong);
+}
+
+.abstract-popover {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 18px;
+}
+
+.abstract-trigger {
+  appearance: none;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  cursor: help;
+  font: inherit;
+  font-weight: 600;
+}
+
+.abstract-trigger:hover {
+  color: var(--accent-dark);
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.abstract-trigger:focus-visible {
+  border-radius: 4px;
+  outline: 3px solid rgba(20, 87, 182, 0.28);
+  outline-offset: 4px;
+}
+
+.abstract-tooltip {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 10px);
+  z-index: 30;
+  width: min(440px, calc(100vw - 48px));
+  max-height: min(300px, 60vh);
+  overflow-y: auto;
+  padding: 14px 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 16px 38px rgba(7, 23, 47, 0.16);
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 400;
+  hyphens: auto;
+  line-height: 1.55;
+  opacity: 0;
+  pointer-events: none;
+  text-align: justify;
+  text-align-last: left;
+  transform: translateY(6px);
+  transition: opacity 150ms ease, transform 150ms ease, visibility 150ms;
+  visibility: hidden;
+}
+
+.abstract-popover:hover .abstract-tooltip,
+.abstract-popover:focus-within .abstract-tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  visibility: visible;
 }
 
 .education-list {
@@ -519,6 +590,7 @@ img {
   }
 
   .portrait-frame {
+    justify-self: start;
     max-width: 300px;
     order: -1;
   }
@@ -610,7 +682,21 @@ img {
     padding: 0 14px;
   }
 
-  .publication-links a:first-child {
+  .abstract-popover {
+    padding: 0 14px;
+  }
+
+  .abstract-tooltip {
+    position: fixed;
+    right: 14px;
+    bottom: 18px;
+    left: 14px;
+    width: auto;
+    max-height: 45vh;
+  }
+
+  .publication-links a:first-child,
+  .abstract-popover:first-child {
     padding-left: 0;
   }
 
@@ -631,5 +717,11 @@ img {
 
   .footer-inner p + p::before {
     display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .abstract-tooltip {
+    transition: none;
   }
 }
