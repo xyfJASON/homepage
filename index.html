@@ -35,7 +35,7 @@
         <p class="intro">
           I am a first-year PhD student in the <a href="https://mmlab.hk/">MMLab</a>@<a href="https://www.hku.hk/">HKU</a>, supervised by <a href="https://xh-liu.github.io/">Prof. Xihui Liu</a>. Previously, I earned my MS from the <a href="http://vipl.ict.ac.cn/en">VIPL</a> group at <a href="http://www.ict.cas.cn/">ICT</a> in 2026 under the supervision of <a href="https://vipl.ict.ac.cn/people/~sgshan">Prof. Shiguang Shan</a>, and worked closely with <a href="https://lynnho.github.io/">Prof. Zhenliang He</a>. Before that, I received my BEng from <a href="https://www.hitsz.edu.cn/index.html">HITsz</a> in 2023 under the supervision of <a href="https://wenjiepei.github.io/">Prof. Wenjie Pei</a>.
         </p>
-        <p class="intro" style="margin-top: 10px;">
+        <p class="intro" style="margin-top: 7px;">
           My current research interests lie in generative models and their applications to computer vision, multimodal learning and world models.
         </p>
         <div class="profile-links" aria-label="Profile links">
@@ -281,5 +281,16 @@
       <!-- <p>Last updated: July 5, 2026</p> -->
     </div>
   </footer>
+
+  <script>
+    document.querySelectorAll("a[href]").forEach((link) => {
+      const href = link.getAttribute("href");
+
+      if (!href.startsWith("#") && !href.startsWith("mailto:")) {
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+      }
+    });
+  </script>
 </body>
 </html>
