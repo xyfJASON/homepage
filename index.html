@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="people.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -33,7 +34,7 @@
         <!-- <p class="role">Ph.D. Student in Computer Science</p> -->
         <div class="short-rule" aria-hidden="true"></div>
         <p class="intro">
-          I am a first-year PhD student in the <a href="https://mmlab.hk/">MMLab</a>@<a href="https://www.hku.hk/">HKU</a>, supervised by <a href="https://xh-liu.github.io/">Prof. Xihui Liu</a>. Previously, I earned my MS from the <a href="http://vipl.ict.ac.cn/en">VIPL</a> group at <a href="http://www.ict.cas.cn/">ICT</a> in 2026 under the supervision of <a href="https://vipl.ict.ac.cn/people/~sgshan">Prof. Shiguang Shan</a>, and worked closely with <a href="https://lynnho.github.io/">Prof. Zhenliang He</a>. Before that, I received my BEng from <a href="https://www.hitsz.edu.cn/index.html">HITsz</a> in 2023 under the supervision of <a href="https://wenjiepei.github.io/">Prof. Wenjie Pei</a>.
+          I am a first-year PhD student in the <a href="https://mmlab.hk/">MMLab</a>@<a href="https://www.hku.hk/">HKU</a>, supervised by <a data-person="xihui-liu">Prof. Xihui Liu</a>. Previously, I earned my MS from the <a href="http://vipl.ict.ac.cn/en">VIPL</a> group at <a href="http://www.ict.cas.cn/">ICT</a> in 2026 under the supervision of <a data-person="shiguang-shan">Prof. Shiguang Shan</a>, and worked closely with <a data-person="zhenliang-he">Prof. Zhenliang He</a>. Before that, I received my BEng from <a href="https://www.hitsz.edu.cn/index.html">HITsz</a> in 2023 under the supervision of <a data-person="wenjie-pei">Prof. Wenjie Pei</a>.
         </p>
         <p class="intro" style="margin-top: 7px;">
           My current research interests lie in generative models and their applications to computer vision, multimodal learning and world models.
@@ -102,7 +103,7 @@
             </a>
             <div class="publication-body">
               <h3>Jodi: Unification of Visual Generation and Understanding via Joint Modeling</h3>
-              <p class="authors"><strong>Yifeng Xu</strong>, Zhenliang He, Meina Kan, Shiguang Shan, Xilin Chen</p>
+              <p class="authors"><strong>Yifeng Xu</strong>, <a data-person="zhenliang-he">Zhenliang He</a>, <a data-person="meina-kan">Meina Kan</a>, <a data-person="shiguang-shan">Shiguang Shan</a>, <a data-person="xilin-chen">Xilin Chen</a></p>
               <p class="venue">arXiv 2025</p>
               <div class="publication-links" aria-label="Publication links">
                 <span class="abstract-popover">
@@ -125,7 +126,7 @@
             </a>
             <div class="publication-body">
               <h3>CtrLoRA: An Extensible and Efficient Framework for Controllable Image Generation</h3>
-              <p class="authors"><strong>Yifeng Xu</strong>, Zhenliang He, Shiguang Shan, Xilin Chen</p>
+              <p class="authors"><strong>Yifeng Xu</strong>, <a data-person="zhenliang-he">Zhenliang He</a>, <a data-person="shiguang-shan">Shiguang Shan</a>, <a data-person="xilin-chen">Xilin Chen</a></p>
               <p class="venue">ICLR 2025</p>
               <div class="publication-links" aria-label="Publication links">
                 <span class="abstract-popover">
@@ -147,7 +148,7 @@
             </a>
             <div class="publication-body">
               <h3>Hierarchical Contrastive Learning for Pattern-Generalizable Image Corruption Detection</h3>
-              <p class="authors">Xin Feng*, <strong>Yifeng Xu</strong>*, Guangming Lu<sup>&dagger;</sup>, Wenjie Pei<sup>&dagger;</sup></p>
+              <p class="authors"><a data-person="xin-feng">Xin Feng</a>*, <strong>Yifeng Xu</strong>*, <a data-person="guangming-lu">Guangming Lu</a><sup>&dagger;</sup>, <a data-person="wenjie-pei">Wenjie Pei</a><sup>&dagger;</sup></p>
               <p class="venue">ICCV 2023</p>
               <div class="publication-links" aria-label="Publication links">
                 <span class="abstract-popover">
@@ -181,7 +182,7 @@
             <div class="education-main">
               <h3>The University of Hong Kong</h3>
               <p class="degree">PhD student</p>
-              <p>Supervisor: <a href="https://xh-liu.github.io/">Prof. Xihui Liu</a></p>
+              <p>Supervisor: <a data-person="xihui-liu">Prof. Xihui Liu</a></p>
             </div>
             <div class="education-meta">
               <time datetime="2026">2026.09 - Present</time>
@@ -196,7 +197,7 @@
             <div class="education-main">
               <h3>Institute of Computing Technology, CAS</h3>
               <p class="degree">MS in Computer Science and Technology</p>
-              <p>Supervisor: <a href="https://vipl.ict.ac.cn/people/~sgshan">Prof. Shiguang Shan</a></p>
+              <p>Supervisor: <a data-person="shiguang-shan">Prof. Shiguang Shan</a></p>
             </div>
             <div class="education-meta">
               <time datetime="2023">2023.09 - 2026.06</time>
@@ -211,7 +212,7 @@
             <div class="education-main">
               <h3>Harbin Institute of Technology, Shenzhen</h3>
               <p class="degree">BEng in Computer Science and Technology</p>
-              <p>Supervisor: <a href="https://wenjiepei.github.io/">Prof. Wenjie Pei</a></p>
+              <p>Supervisor: <a data-person="wenjie-pei">Prof. Wenjie Pei</a></p>
             </div>
             <div class="education-meta">
               <time datetime="2019">2019.09 - 2023.06</time>
