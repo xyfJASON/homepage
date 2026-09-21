@@ -403,6 +403,12 @@ img {
   font-weight: 600;
 }
 
+.github-stars {
+  margin-left: 4px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
 .publication-links a:first-child,
 .abstract-popover:first-child {
   padding-left: 0;
