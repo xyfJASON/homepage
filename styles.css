@@ -295,6 +295,8 @@ img {
 
 .compact-list time {
   color: var(--ink);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-variant-numeric: tabular-nums;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -391,7 +393,8 @@ img {
   margin-top: 9px;
 }
 
-.publication-links a {
+.publication-links a,
+.publication-detail-trigger {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -399,6 +402,28 @@ img {
   padding: 0 14px;
   color: var(--accent);
   font-weight: 600;
+}
+
+.publication-detail-trigger {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+}
+
+.publication-detail-trigger:hover,
+.publication-detail-trigger[aria-expanded="true"] {
+  color: var(--accent-dark);
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
+.publication-detail-trigger:focus-visible {
+  border-radius: 4px;
+  outline: 3px solid rgba(20, 87, 182, 0.28);
+  outline-offset: 2px;
 }
 
 .github-stars {
@@ -407,13 +432,11 @@ img {
   white-space: nowrap;
 }
 
-.publication-links a:first-child,
-.abstract-popover:first-child {
+.publication-links > :first-child {
   padding-left: 0;
 }
 
-.publication-links a:not(:last-child)::after,
-.abstract-popover:not(:last-child)::after {
+.publication-links > :not(:last-child)::after {
   content: "";
   position: absolute;
   right: 0;
@@ -422,70 +445,34 @@ img {
   background: var(--line-strong);
 }
 
-.abstract-popover {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  min-height: 26px;
-  padding: 0 14px;
-}
-
-.abstract-trigger {
-  appearance: none;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: var(--accent);
-  cursor: help;
-  font: inherit;
-  font-weight: 600;
-}
-
-.abstract-trigger:hover {
-  color: var(--accent-dark);
-  text-decoration: underline;
-  text-underline-offset: 0.22em;
-}
-
-.abstract-trigger:focus-visible {
-  border-radius: 4px;
-  outline: 3px solid rgba(20, 87, 182, 0.28);
-  outline-offset: 4px;
-}
-
-.abstract-tooltip {
-  position: absolute;
-  right: 0;
-  bottom: calc(100% + 10px);
-  z-index: 30;
-  width: min(440px, calc(100vw - 48px));
-  max-height: min(300px, 60vh);
-  overflow-y: auto;
+.publication-detail-panel {
+  margin-top: 10px;
   padding: 12px 14px;
   border: 1px solid var(--line-strong);
   border-radius: 8px;
   background: var(--surface);
-  box-shadow: 0 16px 38px rgba(7, 23, 47, 0.16);
   color: var(--text);
   font-size: 0.88rem;
-  font-weight: 400;
-  hyphens: auto;
   line-height: 1.45;
-  opacity: 0;
-  pointer-events: none;
-  text-align: justify;
-  text-align-last: left;
-  transform: translateY(6px);
-  transition: opacity 150ms ease, transform 150ms ease, visibility 150ms;
-  visibility: hidden;
 }
 
-.abstract-popover:hover .abstract-tooltip,
-.abstract-popover:focus-within .abstract-tooltip {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
-  visibility: visible;
+.publication-detail-panel[hidden] {
+  display: none;
+}
+
+.publication-detail-panel p {
+  margin: 0;
+  hyphens: auto;
+  text-align: justify;
+  text-align-last: left;
+}
+
+.publication-detail-bibtex pre {
+  margin: 0;
+  overflow-x: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.8rem;
+  line-height: 1.5;
 }
 
 .education-list {
@@ -682,25 +669,12 @@ img {
     padding: 15px 0;
   }
 
-  .publication-links a {
+  .publication-links a,
+  .publication-detail-trigger {
     padding: 0 12px;
   }
 
-  .abstract-popover {
-    padding: 0 12px;
-  }
-
-  .abstract-tooltip {
-    position: fixed;
-    right: 14px;
-    bottom: 18px;
-    left: 14px;
-    width: auto;
-    max-height: 45vh;
-  }
-
-  .publication-links a:first-child,
-  .abstract-popover:first-child {
+  .publication-links > :first-child {
     padding-left: 0;
   }
 
@@ -721,11 +695,5 @@ img {
 
   .footer-inner p + p::before {
     display: none;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .abstract-tooltip {
-    transition: none;
   }
 }

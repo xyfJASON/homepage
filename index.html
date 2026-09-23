@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="styles.css">
   <script src="people.js" defer></script>
   <script src="github-stars.js" defer></script>
+  <script src="publication-details.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -107,16 +108,22 @@
               <p class="authors"><strong>Yifeng Xu</strong>, <a data-person="zhenliang-he">Zhenliang He</a>, <a data-person="meina-kan">Meina Kan</a>, <a data-person="shiguang-shan">Shiguang Shan</a>, <a data-person="xilin-chen">Xilin Chen</a></p>
               <p class="venue">arXiv 2025</p>
               <div class="publication-links" aria-label="Publication links">
-                <span class="abstract-popover">
-                  <button class="abstract-trigger" type="button" aria-describedby="abstract-jodi">Abstract</button>
-                  <span class="abstract-tooltip" id="abstract-jodi" role="tooltip">
-                    Visual generation and understanding are two deeply interconnected aspects of human intelligence, yet they have been traditionally treated as separate tasks in machine learning. In this paper, we propose Jodi, a diffusion framework that unifies visual generation and understanding by jointly modeling the image domain and multiple label domains. Specifically, Jodi is built upon a linear diffusion transformer along with a Role-Switch mechanism, which enables it to perform three particular types of tasks: (1) joint generation, where the model simultaneously generates images and multiple labels; (2) controllable generation, where images are generated conditioned on any combination of labels; and (3) image perception, where multiple labels can be predicted at once from a given image. Furthermore, we present the Joint-1.6M dataset, which contains 200K highquality images collected from public sources, automatic labels for 7 visual domains, and LLM-generated captions. Extensive experiments demonstrate that our Jodi excels in generation tasks and performs competitively in understanding tasks. Besides, Jodi exhibits strong extensibility to new visual domains. Codes, data, and model weights are available at https://github.com/VIPL-GENUN/Jodi.
-                  </span>
-                </span>
+                <button class="publication-detail-trigger" type="button" aria-expanded="false" aria-controls="abstract-jodi">Abstract</button>
                 <a href="https://arxiv.org/abs/2505.19084">arXiv</a>
                 <a href="https://github.com/VIPL-GENUN/Jodi">Code <span class="github-stars" data-repo="VIPL-GENUN/Jodi">★</span></a>
                 <a href="https://VIPL-GENUN.github.io/Project-Jodi">Project</a>
-                <a href="assets/pub/jodi.bib.txt">BibTeX</a>
+                <button class="publication-detail-trigger" type="button" aria-expanded="false" aria-controls="bibtex-jodi">BibTeX</button>
+              </div>
+              <div class="publication-detail-panel" id="abstract-jodi" hidden>
+                <p>Visual generation and understanding are two deeply interconnected aspects of human intelligence, yet they have been traditionally treated as separate tasks in machine learning. In this paper, we propose Jodi, a diffusion framework that unifies visual generation and understanding by jointly modeling the image domain and multiple label domains. Specifically, Jodi is built upon a linear diffusion transformer along with a Role-Switch mechanism, which enables it to perform three particular types of tasks: (1) joint generation, where the model simultaneously generates images and multiple labels; (2) controllable generation, where images are generated conditioned on any combination of labels; and (3) image perception, where multiple labels can be predicted at once from a given image. Furthermore, we present the Joint-1.6M dataset, which contains 200K highquality images collected from public sources, automatic labels for 7 visual domains, and LLM-generated captions. Extensive experiments demonstrate that our Jodi excels in generation tasks and performs competitively in understanding tasks. Besides, Jodi exhibits strong extensibility to new visual domains. Codes, data, and model weights are available at https://github.com/VIPL-GENUN/Jodi.</p>
+              </div>
+              <div class="publication-detail-panel publication-detail-bibtex" id="bibtex-jodi" hidden>
+                <pre><code>@article{xu2025jodi,
+  title={Jodi: Unification of Visual Generation and Understanding via Joint Modeling},
+  author={Xu, Yifeng and He, Zhenliang and Kan, Meina and Shan, Shiguang and Chen, Xilin},
+  journal={arXiv preprint arXiv:2505.19084},
+  year={2025}
+}</code></pre>
               </div>
             </div>
           </article>
@@ -130,15 +137,22 @@
               <p class="authors"><strong>Yifeng Xu</strong>, <a data-person="zhenliang-he">Zhenliang He</a>, <a data-person="shiguang-shan">Shiguang Shan</a>, <a data-person="xilin-chen">Xilin Chen</a></p>
               <p class="venue">ICLR 2025</p>
               <div class="publication-links" aria-label="Publication links">
-                <span class="abstract-popover">
-                  <button class="abstract-trigger" type="button" aria-describedby="abstract-ctrlora">Abstract</button>
-                  <span class="abstract-tooltip" id="abstract-ctrlora" role="tooltip">
-                    Recently, large-scale diffusion models have made impressive progress in text-toimage (T2I) generation. To further equip these T2I models with fine-grained spatial control, approaches like ControlNet introduce an extra network that learns to follow a condition image. However, for every single condition type, ControlNet requires independent training on millions of data pairs with hundreds of GPU hours, which is quite expensive and makes it challenging for ordinary users to explore and develop new types of conditions. To address this problem, we propose the CtrLoRA framework, which trains a Base ControlNet to learn the common knowledge of image-to-image generation from multiple base conditions, along with condition-specific LoRAs to capture distinct characteristics of each condition. Utilizing our pretrained Base ControlNet, users can easily adapt it to new conditions, requiring as few as 1,000 data pairs and less than one hour of single-GPU training to obtain satisfactory results in most scenarios. Moreover, our CtrLoRA reduces the learnable parameters by 90% compared to ControlNet, significantly lowering the threshold to distribute and deploy the model weights. Extensive experiments on various types of conditions demonstrate the efficiency and effectiveness of our method. Codes and model weights will be released at https://github.com/xyfJASON/ctrlora.
-                  </span>
-                </span>
+                <button class="publication-detail-trigger" type="button" aria-expanded="false" aria-controls="abstract-ctrlora">Abstract</button>
                 <a href="https://arxiv.org/abs/2410.09400">arXiv</a>
                 <a href="https://github.com/xyfJASON/ctrlora">Code <span class="github-stars" data-repo="xyfJASON/ctrlora">★</span></a>
-                <a href="assets/pub/ctrlora.bib.txt">BibTeX</a>
+                <button class="publication-detail-trigger" type="button" aria-expanded="false" aria-controls="bibtex-ctrlora">BibTeX</button>
+              </div>
+              <div class="publication-detail-panel" id="abstract-ctrlora" hidden>
+                <p>Recently, large-scale diffusion models have made impressive progress in text-toimage (T2I) generation. To further equip these T2I models with fine-grained spatial control, approaches like ControlNet introduce an extra network that learns to follow a condition image. However, for every single condition type, ControlNet requires independent training on millions of data pairs with hundreds of GPU hours, which is quite expensive and makes it challenging for ordinary users to explore and develop new types of conditions. To address this problem, we propose the CtrLoRA framework, which trains a Base ControlNet to learn the common knowledge of image-to-image generation from multiple base conditions, along with condition-specific LoRAs to capture distinct characteristics of each condition. Utilizing our pretrained Base ControlNet, users can easily adapt it to new conditions, requiring as few as 1,000 data pairs and less than one hour of single-GPU training to obtain satisfactory results in most scenarios. Moreover, our CtrLoRA reduces the learnable parameters by 90% compared to ControlNet, significantly lowering the threshold to distribute and deploy the model weights. Extensive experiments on various types of conditions demonstrate the efficiency and effectiveness of our method. Codes and model weights will be released at https://github.com/xyfJASON/ctrlora.</p>
+              </div>
+              <div class="publication-detail-panel publication-detail-bibtex" id="bibtex-ctrlora" hidden>
+                <pre><code>@inproceedings{xu2025ctrlora,
+  title={CtrLo{RA}: An Extensible and Efficient Framework for Controllable Image Generation},
+  author={Yifeng Xu and Zhenliang He and Shiguang Shan and Xilin Chen},
+  booktitle={The Thirteenth International Conference on Learning Representations},
+  year={2025},
+  url={https://openreview.net/forum?id=3Gga05Jdmj}
+}</code></pre>
               </div>
             </div>
           </article>
@@ -152,17 +166,25 @@
               <p class="authors"><a data-person="xin-feng">Xin Feng</a>*, <strong>Yifeng Xu</strong>*, <a data-person="guangming-lu">Guangming Lu</a><sup>&dagger;</sup>, <a data-person="wenjie-pei">Wenjie Pei</a><sup>&dagger;</sup></p>
               <p class="venue">ICCV 2023</p>
               <div class="publication-links" aria-label="Publication links">
-                <span class="abstract-popover">
-                  <button class="abstract-trigger" type="button" aria-describedby="abstract-hcl">Abstract</button>
-                  <span class="abstract-tooltip" id="abstract-hcl" role="tooltip">
-                    Effective image restoration with large-size corruptions, such as blind image inpainting, entails precise detection of corruption region masks which remains extremely challenging due to diverse shapes and patterns of corruptions. In this work, we present a novel method for automatic corruption detection, which allows for blind corruption restoration without known corruption masks. Specifically, we develop a hierarchical contrastive learning framework to detect corrupted regions by capturing the intrinsic semantic distinctions between corrupted and uncorrupted regions. In particular, our model detects the corrupted mask in a coarse-to-fine manner by first predicting a coarse mask by contrastive learning in low-resolution feature space and then refines the uncertain area of the mask by high-resolution contrastive learning. A specialized hierarchical interaction mechanism is designed to facilitate the knowledge propagation of contrastive learning in different scales, boosting the modeling performance substantially. The detected multi-scale corruption masks are then leveraged to guide the corruption restoration. Detecting corrupted regions by learning the contrastive distinctions rather than the semantic patterns of corruptions, our model has well generalization ability across different corruption patterns. Extensive experiments demonstrate following merits of our model: 1) the superior performance over other methods on both corruption detection and various image restoration tasks including blind inpainting and watermark removal, and 2) strong generalization across different corruption patterns such as graffiti, random noise or other image content. Codes and trained weights are available at https://github.com/xyfJASON/HCL.
-                  </span>
-                </span>
+                <button class="publication-detail-trigger" type="button" aria-expanded="false" aria-controls="abstract-hcl">Abstract</button>
                 <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Feng_Hierarchical_Contrastive_Learning_for_Pattern-Generalizable_Image_Corruption_Detection_ICCV_2023_paper.pdf">PDF</a>
                 <a href="https://openaccess.thecvf.com/content/ICCV2023/supplemental/Feng_Hierarchical_Contrastive_Learning_ICCV_2023_supplemental.pdf">Supp</a>
                 <a href="https://arxiv.org/abs/2308.14061">arXiv</a>
                 <a href="https://github.com/xyfJASON/HCL">Code <span class="github-stars" data-repo="xyfJASON/HCL">★</span></a>
-                <a href="assets/pub/hcl.bib.txt">BibTeX</a>
+                <button class="publication-detail-trigger" type="button" aria-expanded="false" aria-controls="bibtex-hcl">BibTeX</button>
+              </div>
+              <div class="publication-detail-panel" id="abstract-hcl" hidden>
+                <p>Effective image restoration with large-size corruptions, such as blind image inpainting, entails precise detection of corruption region masks which remains extremely challenging due to diverse shapes and patterns of corruptions. In this work, we present a novel method for automatic corruption detection, which allows for blind corruption restoration without known corruption masks. Specifically, we develop a hierarchical contrastive learning framework to detect corrupted regions by capturing the intrinsic semantic distinctions between corrupted and uncorrupted regions. In particular, our model detects the corrupted mask in a coarse-to-fine manner by first predicting a coarse mask by contrastive learning in low-resolution feature space and then refines the uncertain area of the mask by high-resolution contrastive learning. A specialized hierarchical interaction mechanism is designed to facilitate the knowledge propagation of contrastive learning in different scales, boosting the modeling performance substantially. The detected multi-scale corruption masks are then leveraged to guide the corruption restoration. Detecting corrupted regions by learning the contrastive distinctions rather than the semantic patterns of corruptions, our model has well generalization ability across different corruption patterns. Extensive experiments demonstrate following merits of our model: 1) the superior performance over other methods on both corruption detection and various image restoration tasks including blind inpainting and watermark removal, and 2) strong generalization across different corruption patterns such as graffiti, random noise or other image content. Codes and trained weights are available at https://github.com/xyfJASON/HCL.</p>
+              </div>
+              <div class="publication-detail-panel publication-detail-bibtex" id="bibtex-hcl" hidden>
+                <pre><code>@InProceedings{Feng_2023_ICCV,
+    author    = {Feng, Xin and Xu, Yifeng and Lu, Guangming and Pei, Wenjie},
+    title     = {Hierarchical Contrastive Learning for Pattern-Generalizable Image Corruption Detection},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2023},
+    pages     = {12076-12085}
+}</code></pre>
               </div>
             </div>
           </article>
