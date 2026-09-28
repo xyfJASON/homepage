@@ -30,7 +30,7 @@
     },
     "xin-feng": {
       name: "Xin Feng",
-      url: "https://scholar.google.com/citations?user=dkfbz90AAAAJ"
+      url: "https://funkdub.github.io/fengx.github.io/"
     }
   });
 

@@ -330,6 +330,7 @@ img {
 
 .publication-image {
   display: block;
+  align-self: start;
   width: min(100%, 240px);
   overflow: hidden;
   border: 1px solid var(--line-strong);
@@ -382,7 +383,6 @@ img {
   margin: 3px 0 0;
   color: #3b4658;
   font-size: 0.88rem;
-  font-style: italic;
 }
 
 .publication-links {
